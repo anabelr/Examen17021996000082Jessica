@@ -1,0 +1,23 @@
+<h1>Datos</h1>
+<form action="/Datos" method="post">
+  <label>Nombre</label>
+  <input type="text" name="txtNombre" placeholder="Nombre completo" value="{{txtNombre}}"/>
+  <br/>
+  <label>Cuenta</label>
+  <input type="text" name="txtCuenta" placeholder="Numero de cuenta" value="{{txtCuenta}}"/>
+  <br/>
+  <label>Correo</label>
+  <input type="text" name="txtCorreo" placeholder="Email" value="{{txtCorreo}}"/>
+  <br/>
+  <button  type="submit" value="Registrar" name="btnEnviar">Registrar</button>
+  <button  type="reset" value="Cancelar" name="btnCancelar">Cancelar</button>
+</form>
+<div>
+  <ul>
+    {{#each personas}}
+    <li>
+      {{nombre}} | {{cuenta}} | {{correo}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
